@@ -28,6 +28,13 @@ public class TestMyBatis {
     @Test
     public void test1() {
         User user = userService.getUserById(2);
+        User user1 = new User();
+        user1.setAge(24);
+        user1.setPassword("123456");
+        user1.setUserName("admin");
+
+        logger.info(JSON.toJSONString(user1));
+        userService.insertUser(user1);
         logger.info(JSON.toJSONString(user));
     }
 }

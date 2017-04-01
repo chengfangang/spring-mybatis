@@ -6,4 +6,5 @@ import com.cn.hnust.pojo.User;
  */
 public interface IUserService {
     User getUserById(int userId);
+    int insertUser(User user);
 }
